@@ -18,6 +18,8 @@
              :key="index">{{index}}</div>
       </div>
     </Scroller>
+    <el-button type="primary">主要按钮</el-button>
+    <i class="el-icon-edit"></i>
   </div>
 </template>
 
