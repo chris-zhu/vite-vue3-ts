@@ -1,5 +1,5 @@
 import axios from 'axios'
-// import { message } from 'ant-design-vue'
+import { message } from 'ant-design-vue'
 import type { Result } from './type'
 import { getToken, removeToken } from '/@/utils/auth'
 import router from "/@/route"
@@ -30,7 +30,7 @@ instance.interceptors.response.use(
     if (res.data && res.data.status === 200) {
       return Promise.resolve(res)
     } else {
-      // message.error(res.data.msg)
+      message.error(res.data.msg)
       return Promise.reject(res)
     }
   },
@@ -38,23 +38,23 @@ instance.interceptors.response.use(
     if (error.response) {
       switch (error.response.status) {
         case 401:
-          // message.warning('请先登录后操作')
+          message.warning('请先登录后操作')
           removeToken()
           router.push('/login')
           break
         case 403:
-          // message.warning('登录过期，请重新登录')
+          message.warning('登录过期，请重新登录')
           removeToken()
           router.push('/login')
           break
         case 404:
-          // message.error('网络请求不存在')
+          message.error('网络请求不存在')
           break
         case 500:
-          // message.error('服务器内部错误')
+          message.error('服务器内部错误')
           break
         default:
-        // message.error(error.response.data.msg || '未知错误')
+        message.error(error.response.data.msg || '未知错误')
       }
     }
     return Promise.reject(error)

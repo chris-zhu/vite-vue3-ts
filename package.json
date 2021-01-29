@@ -8,6 +8,7 @@
   "dependencies": {
     "@better-scroll/core": "^2.1.4",
     "@better-scroll/mouse-wheel": "^2.1.4",
+    "ant-design-vue": "^2.0.0-rc.9",
     "axios": "^0.20.0",
     "vue": "^3.0.4",
     "vue-router": "^4.0.3",

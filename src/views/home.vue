@@ -18,15 +18,18 @@
              :key="index">{{index}}</div>
       </div>
     </Scroller>
+    <a-button type="primary">哈哈哈</a-button>
+    <StepBackwardOutlined />
   </div>
 </template>
 
 <script lang='ts'>
 import { defineComponent, nextTick, reactive, ref } from 'vue'
 import Scroller from '/@c/Scroller/index.vue'
+import { StepBackwardOutlined } from '@ant-design/icons-vue'
 export default defineComponent({
   name: 'home',
-  components: { Scroller },
+  components: { Scroller, StepBackwardOutlined },
   setup() {
     const scc = ref<any>(null)
     nextTick(() => {

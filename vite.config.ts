@@ -11,9 +11,9 @@ module.exports = {
     '/@c/': pathResolve('src/components'),
   },
   // outDir: pathResolve(`../build${pathName}`),
-  // optimizeDeps: {
-  //   include: ['ant-design-vue', '@ant-design-vue/use', '@ant-design/icons-vue', 'vue-socket.io'],
-  // },
+  optimizeDeps: {
+    include: ['ant-design-vue', '@ant-design-vue/use', '@ant-design/icons-vue'],
+  },
   // proxy: {
   //   '/api': {
   //     target: 'http://localhost:9999/api',
